@@ -25,4 +25,4 @@ app.service('array_service',function () {
 
 
 
-})
+});

@@ -15,7 +15,7 @@ app.controller('ViewCtrl',function ($firebaseArray,$state,array_service) {
                 vm.fire_array = arr1
 
                 vm.edit_func = function (id) {
-                    $state.go('add',{id:id});
+                    $state.go('edit',{id:id});
                     console.log(id);
                 };
             }).catch(function (err) {

@@ -9,11 +9,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     // HOME STATES AND NESTED VIEWS =====
         .state('add', {
-            url: '/add/:id',
+            url: '/add',
             templateUrl: './components/add/add.html',
-            controller: 'AddCtrl as vm',
-
+            controller: 'AddCtrl as vm'
         })
+
+
+        .state('edit', {
+        url: '/edit/:id',
+        templateUrl: './components/edit/edit.html',
+        controller: 'EditCtrl as vm'
+        })
+
+
+
 
         // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('view', {
@@ -21,16 +30,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: './components/view/view.html',
             controller: 'ViewCtrl as vm',
             params : {id:null}
-
-
-
         })
-        .state('add.view', {
+       /* .state('edit.view', {
             url: '/add.view',
             templateUrl: './components/view/view.html'
 
         })
-        .state('login', {
+       */ .state('login', {
             url: '/login',
             templateUrl: './components/login/login.html',
             controller: 'LoginCtrl as vm'
