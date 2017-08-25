@@ -48,6 +48,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'SignUpCtrl as vm'
 
         })
+        .state('signOut', {
+            url: '/signOut',
+            templateUrl: './components/signOut/signOut.html',
+            controller: 'signOutCtrl as vm'
+
+        })
          .state('home', {
         url: '/home',
         templateUrl: './index.html',
@@ -73,7 +79,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 /*ui-router view code ends*/
 
 
-app.controller("homeCtrl",function (array_service) {
+app.controller("homeCtrl",function () {
+
 
 });
 

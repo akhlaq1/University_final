@@ -25,6 +25,7 @@ app.controller('ViewCtrl',function ($firebaseArray,$state,array_service) {
         else {
             // No user is signed in.
             console.log("No user is signed in")
+            $state.go('login')
         }
         vm.del_func = function (index) {
             vm.fire_array.$remove(index);
