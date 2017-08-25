@@ -10,6 +10,7 @@ app.controller("signOutCtrl",function ($state) {
             firebase.auth().signOut().then(function() {
                 console.log('Signed Out');
                 vm.message = "You have been successfully signed out"
+
             }).catch(function(error) {
                 console.error('Sign Out Error', error);
                 vm.message = error;
@@ -19,7 +20,8 @@ app.controller("signOutCtrl",function ($state) {
         else {
             // No user is signed in.
             console.log("No user is signed in")
-            $state.go('login')
+
+
         }
     })
 

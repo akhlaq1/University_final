@@ -2,11 +2,6 @@ var app = angular.module('myApp');
 app.controller('LoginCtrl',function () {
     var vm = this;
 
-    vm.signOut = function () {
-
-        array_service.signOut_func()
-    };
-
     /*log in Google Code starts*/
 
 
